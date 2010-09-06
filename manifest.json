@@ -1,0 +1,22 @@
+{
+
+	"name": "PowerBL (mbl.is viewer)",
+
+	"version": "1.0",
+
+	"description": "Skoða mbl.is eins og maður",
+
+	"background_page": "page.html",
+
+
+
+	"browser_action": {
+		"default_icon": "mbl-icon.png",
+		"default_title": "PowerBL - Skoða mbl.is eins og mðaur"
+	},
+	"permissions": [
+		"http://mbl.is/", "tabs", "http://www.mbl.is/"
+	]
+
+}
+
