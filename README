@@ -1,3 +1,8 @@
 Ekki mikið info enn sem komið er...
 
 gerir það bara bærilegra að skoða mbl
+
+-- ath varðandi source --
+
+eitthvað af kóðanum er í ISO-8859-1 því að mbl notar það encoding og ég nennti
+ekki að fara út í eitthvað decoding rugl.

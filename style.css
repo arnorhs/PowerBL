@@ -11,7 +11,7 @@ body {
 	padding:0;
 	line-height: 1.4em;
 	
-	text-shadow: 0px 1px 0px #FFF;
+
 	
 }
 a {
@@ -22,6 +22,9 @@ a {
 }
 h1 a, h2 a, h3 a, h4 a, h5 a {
 	text-decoration:none;
+}
+h1,h2,h3,h4,h5,h6{
+	text-shadow: 0px 1px 0px #FFF;
 }
 
 a:hover {

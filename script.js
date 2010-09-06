@@ -3,9 +3,7 @@
 
 $(document).ready(function () {
 
-	for (var i in mbl_urls) {
-		mbl_requests.ajax_request(mbl_urls[i]);		
-	}
+	mbl_urls.start_retrieval();
 	
 	/* bæta við events fyrir að skoða spjall þráð osfrv */
 	$('a.powerbl-comments').live('click',function () {
@@ -31,14 +29,47 @@ $(document).ready(function () {
 });
 
 
-var mbl_urls = [
+var mbl_urls = {
 
-	'http://mbl.is/mm/frettir/innlent/',
-	'http://mbl.is/mm/frettir/erlent/',
-	'http://mbl.is/mm/frettir/togt/',
-	'http://mbl.is/mm/vidskipti/frettir.html'
+	start_retrieval: function () {
 
-];
+		for (var i in mbl_urls.urls) {
+			with (mbl_urls.urls[i]) {
+				if (active) {
+					mbl_requests.ajax_request(url);
+				}
+			}
+		}	
+		
+	},
+	
+ 
+
+
+	urls: [
+		{
+			title: 'Innlent',
+			url: 'http://mbl.is/mm/frettir/innlent/',
+			active: 1
+		},
+		{
+			title: 'Innlent',
+			url: 'http://mbl.is/mm/frettir/erlent/',
+			active: 1
+		},
+		{
+			title: 'Innlent',
+			url: 'http://mbl.is/mm/frettir/togt/',
+			active: 1
+		},
+		{
+			title: 'Innlent',
+			url: 'http://mbl.is/mm/vidskipti/frettir.html',
+			active: 1
+		}
+	]
+
+};
 
 
 var powerbl = {
@@ -101,7 +132,6 @@ var powerbl = {
 	},
 	start_load: function () {
 		$('div.indicator').html('<span class="loading"></span>');
-
 	},
 	/*
 		Fer í gegnum alla elements (allar fréttir) og finnur út hvort þær
@@ -144,7 +174,9 @@ var powerbl = {
 
 			return;
 		}
-	
+		
+		$("li[uid='"+uid+"'] div.fulltext").html('<div class="loading"></div>');
+		
 		//pff.. þetta uid er í raun bara url - gæti alltaf breyst ef við bætum við Vísir.is eða eitthvað
 		$.ajax({
 			url: uid,
@@ -178,8 +210,6 @@ var powerbl = {
 			$element.find('img').attr('src','http://mbl.is' + imgsrc);
 		}
 		
-
-	
 
 	}
 	
