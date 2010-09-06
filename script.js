@@ -143,7 +143,7 @@ var powerbl = {
 		// ættum kannski að bæta smá við, svo það verði ekki svo mikið delay þegar notandinn skrollar
 		// hefðum kannski aldrei þurft window height.. ???
 		// síðan stækkar glugginn líka geðveikt mikið þegar textinn bætist við..  hmmm
-		range.bottom = range.bottom + 500;
+		// sleppi þessu eftir allt saman range.bottom = range.bottom + 500;
 
 		$('#powerbl-content ul li').each(function(){
 			// þurfum bara að athuga efri línuna
