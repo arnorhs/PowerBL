@@ -4,7 +4,7 @@
 
 	"version": "1.0",
 
-	"description": "Skoða mbl.is eins og maður",
+	"description": "ATH: Þetta er algjört *BETA* svo það koma pottþétt upp einhverjar villur. Þetta er lítil tilraun í að gera Chrome extension sem leyfir manni á öflugan hátt að skoða margar fréttir í einu á mbl án þess að þurfa að smella á þær og sjá neinar auglýsingar.",
 
 	"background_page": "page.html",
 
