@@ -1,10 +1,10 @@
 {
 
-	"name": "PowerBL (mbl.is viewer) *BETA*",
+	"name": "PowerBL (mbl.is á róandi) *BETA*",
 
 	"version": "1.0",
 
-	"description": "ATH: Þetta er algjört *BETA* svo það koma pottþétt upp einhverjar villur. Þetta er lítil tilraun í að gera Chrome extension sem leyfir manni á öflugan hátt að skoða margar fréttir í einu á mbl án þess að þurfa að smella á þær og sjá neinar auglýsingar.",
+	"description": "Tilraun í að gera Chrome extension sem leyfir manni að skoða margar mbl fréttir í einu í fáum smellum og án auglýsinga.",
 
 	"background_page": "page.html",
 
